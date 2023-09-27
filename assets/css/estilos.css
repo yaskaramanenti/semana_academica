@@ -1,0 +1,60 @@
+ @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Fjalla+One&display=swap');
+
+ :root { 
+    --fonte-principal: 'Exo 2';
+    --fonte-secundaria: 'Fjalla One'; 
+ }
+
+ body {
+    font-family: var(--fonte-principal), sans-serif;
+}
+
+h1 {
+    font-family: var(--fonte-secundaria), sans-serif;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #7ba6e6;
+    color: #fff; 
+    text-align: center; 
+    padding: 2rem; ;
+}
+
+header h1 {
+    margin-bottom: 30px;
+}
+
+
+#nav {
+    background-color: #00569D;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}    
+
+#nav ul li {
+    list-style: none;
+    display: inline;
+    padding: 5px 0px;
+    margin: 0 5px;
+}    
+
+#nav ul.right li {
+    float: right;
+}    
+
+#nav ul li a {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    text-decoration: none;
+}    
+
+#nav ul#menu li:hover {
+    background-color: #003777;
+}    
