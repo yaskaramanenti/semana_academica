@@ -20,41 +20,72 @@ h1 {
 }
 
 header {
-    background-color: #7ba6e6;
+    background-color: #563397;
     color: #fff; 
     text-align: center; 
-    padding: 2rem; ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
 }
 
 header h1 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 
-#nav {
-    background-color: #00569D;
+nav {
+    background-color: #563397;
     padding-top: 20px;
     padding-bottom: 20px;
 }    
 
-#nav ul li {
+nav ul li {
     list-style: none;
     display: inline;
     padding: 5px 0px;
     margin: 0 5px;
 }    
 
-#nav ul.right li {
+nav ul.right li {
     float: right;
 }    
 
-#nav ul li a {
+
+
+nav li {
+    transition: all 0.3s ease;
+}
+
+nav ul li:hover {
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    background-color: rgba(49, 25, 91, 0.628);
+    box-shadow: 0 8px 32px 0 rgba(49, 25, 91, 0.628);
+    transform: scale(1.15);
+    transition: .2s;
+   
+}
+
+nav ul:hover{
+    transition: .2s;
+   
+}
+nav ul li{
+    text-transform: uppercase;
+    transition: .2s;
+    display: inline-block;
+    line-height: 40px;
+    border-radius: 12px;
+    
+}
+nav ul li a{
+    color: white;
+    border-radius:4px;
+    text-decoration: none;
     padding-left: 10px;
     padding-right: 10px;
-    color: white;
-    text-decoration: none;
-}    
+}
 
-#nav ul#menu li:hover {
-    background-color: #003777;
-}    
+
