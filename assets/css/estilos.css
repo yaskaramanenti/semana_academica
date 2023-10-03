@@ -7,6 +7,7 @@
 
  body {
     font-family: var(--fonte-principal), sans-serif;
+    background-color: rgb(111, 65, 155);
 }
 
 h1 {
@@ -87,5 +88,24 @@ nav ul li a{
     padding-left: 10px;
     padding-right: 10px;
 }
+ .galery {
+    width: 1950px;
+    height: 700px;
+    background-color: rgb(111, 65, 155);
+    overflow: hidden;
+ }
 
+ .galery .fotos{
+    width: 500%;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    opacity: 0.2;
+ }
 
+ .galery .fotos img{
+    width: 19.9%;
+ }
+
+ 
+ 
