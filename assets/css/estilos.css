@@ -7,7 +7,7 @@
 
  body {
     font-family: var(--fonte-principal), sans-serif;
-    background-color: rgb(111, 65, 155);
+    background-color: rgb(77, 42, 109);
 }
 
 h1 {
@@ -28,18 +28,17 @@ header {
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
-
 }
 
 header h1 {
     margin-bottom: 10px;
 }
 
-
 nav {
     background-color: #563397;
     padding-top: 20px;
     padding-bottom: 20px;
+    box-shadow: 0px 0px 10px 0px rgb(173, 96, 225);
 }    
 
 nav ul li {
@@ -53,8 +52,6 @@ nav ul.right li {
     float: right;
 }    
 
-
-
 nav li {
     transition: all 0.3s ease;
 }
@@ -62,8 +59,8 @@ nav li {
 nav ul li:hover {
     backdrop-filter: blur( 6px );
     -webkit-backdrop-filter: blur( 6px );
-    background-color: rgba(49, 25, 91, 0.628);
-    box-shadow: 0 8px 32px 0 rgba(49, 25, 91, 0.628);
+    background-color: rgb(77, 42, 109);
+    box-shadow: 0 8px 32px 0 rgba(133, 88, 210, 0.628);
     transform: scale(1.15);
     transition: .2s;
    
@@ -91,7 +88,7 @@ nav ul li a{
  .galery {
     width: 1950px;
     height: 700px;
-    background-color: rgb(111, 65, 155);
+    background-color:  #563397;
     overflow: hidden;
  }
 
@@ -100,12 +97,120 @@ nav ul li a{
     animation-name: animacao;
     animation-duration: 20s;
     animation-iteration-count: infinite;
-    opacity: 0.2;
+    opacity: 0.3;
+    
  }
 
  .galery .fotos img{
     width: 19.9%;
  }
 
+ .texto h1:hover{
+    transform: scale(1.15);
+    letter-spacing: 3px;
+}
+
+.texto h3:hover{
+    transform: scale(1.15);
+    letter-spacing: 2px;
+}
+
+.texto h2:hover{
+    transform: scale(1.15);
+    letter-spacing: 1px;
+}
+
+.texto{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 10px 0px 10px 0px #3b136e;;
+}
  
+
+.texto{
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: auto;
+    background-size: cover;
+}
+
+.texto{
+    margin: 0 auto;
+    color: white;
+    width: auto;
+    text-align: center;
+}
+
+.texto h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 63px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    cursor: default;
+    transition: .3s;
+    display: inline-block;
+}
+
+
+.texto h3 {
+    font-family: 'Fjalla One', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 38px;
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    cursor: default;
+    transition: .3s;
+    display: inline-block;
+}
+
+.texto h2 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 19px;
+    cursor: default;
+    margin: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: .3s;
+}
+
+.galery .fotos img{
+    width: 19.9%;
+ }
+
+ .parcerias h1:hover{
+    transform: scale(1.15);
+    letter-spacing: 3px;
+}
+
+.parcerias{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 0px 0px 10px 0px #3b136e;;
+}
  
+
+.parcerias{
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: auto;
+    background-size: cover;
+}
+
+.parcerias{
+    margin: 0 auto;
+    color: white;
+    width: auto;
+    text-align: center;
+}
+
+.parcerias h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 63px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    cursor: default;
+    transition: .3s;
+    display: inline-block;
+}
+
