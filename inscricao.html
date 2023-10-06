@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="site para semana acadêmica de informática no IFC Videira">
+    <meta name="keywords" content="informática, jogos, IFC, semana acadêmica, videira, inscrição">
+    <meta name="author" content="Maria Eduarda e Yaskara">
+    <title>VIII - SCI | Inscreva-se</title>
+    <link rel="shortcut icon" href="assets/img/SCIlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>VIII - SCI</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Parcerias</a></li>
+                <li><a href="#">Maratona</a></li>
+                <li><a href="#">Jogos Eletrônicos</a></li>
+                <li><a href="index.html">Cronograma</a></li>
+                <li><a href="#">Fotos</a></li>
+                <li><a href="#">Orçamento</a></li>
+                <li><a href="inscricao.html">Inscreva-se</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <form>
+                <fieldset>
+                    <legend>Cadastro semana academica</legend>
+                    <div class="input-container">
+                        <label for="nomedoaluno">Nome do Aluno</label>
+                        <input type="text" name="nome" id="nome" placeholder="Seu nome" required autofocus>
+                    </div>
+                    <div class="input-container">
+                        <label for="matricula">Matricula</label>
+                        <input type="text" name="matricula" id="matricula" placeholder="Sua matricula" required
+                            pattern="2023322116">
+                    </div>
+                    <div class="input-container">
+                        <label for="CPF">CPF</label>
+                        <input type="text" name="CPF" id="CPF" placeholder="Seu CPF" required pattern="124.138.669-22">
+                    </div>
+                    <div class="input-container">
+                         <label for="email">E-mail</label>
+                         <input type="text" name="email" id="email" placeholder="Seu e-mail" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="turma">Turma | curso </label>
+                        <select name="turma" id="turma" required>
+                           <option value="">Selecione</option>
+                           <option value="informática 1A">informática 1A</option>
+                           <option value="informática 1B">informática 1B</option>
+                           <option value="informática 2A">informática 2A</option>
+                           <option value="informática 2B">informática 2B</option>
+                           <option value="informática 3A">informática 3A</option>
+                           <option value="informática 3B">informática 3B</option>
+                           <option value="ciencia da computação">Ciência da computação</option>
+
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
