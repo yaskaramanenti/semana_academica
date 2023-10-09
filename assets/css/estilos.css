@@ -222,17 +222,26 @@
 
  /*estilo do formulário*/
 
+ .container {
+    width: 1700px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color:#4b3379;;
+    box-shadow: 0px 0px 10px 0px rgb(173, 96, 225);
+}
+
  form fieldset {
      border: 1px solid #ccc;
      border-radius: 3px;
      padding: 8px;
      margin-bottom: 10px;
-     background-color: #563397;
+     background-color: #8360c5;
  }
 
  form legend {
      font-weight: bold;
-     color: white;
+     color:#000
  }
 
  .input-container {
