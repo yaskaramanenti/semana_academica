@@ -74,7 +74,7 @@ nav ul li{
     text-transform: uppercase;
     transition: .2s;
     display: inline-block;
-    line-height: 40px;
+    line-height: 31px;
     border-radius: 12px;
     
 }
@@ -219,8 +219,8 @@ nav ul li a{
 
 form fieldset {
     border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
+    border-radius: 3px;
+    padding: 8px;
     margin-bottom: 10px;
     background-color:  #563397;
 }
@@ -273,3 +273,53 @@ button[type="reset"] {
 button:hover {
     background-color: #563397;
 }
+
+/*Estilo dos Jogos*/
+
+.jogos {
+    background-color: #fffcfa;
+}
+
+#jogos img {
+    height: 350px;
+}
+
+#jogos h1 {
+    text-align: center;
+}
+
+#jogos h4 {
+    text-align: center;
+    font-size: 20 px;
+    color: white;
+    background-color: #b36442;
+    border-radius: 8px 8px 8px 8px;
+    font-weight: normal;
+    padding: 5px;
+}
+
+img.ajuste_img {
+    object-fit: cover;
+   
+}
+
+.clearfix {
+    overflow: hidden;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+img {
+    width: 100%;
+}
+
+img.img_ajuste {
+    object-fit: cover;
+    border-radius: 8px 8px 8px 8px;
+}
+
