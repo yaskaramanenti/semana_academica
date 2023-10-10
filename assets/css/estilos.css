@@ -89,14 +89,14 @@
  }
 
  .galery {
-     width: 1900px;
+     width: 100%;
      height: 700px;
      background-color: #563397;
      overflow: hidden;
  }
 
  .galery .fotos {
-     width: 500%;
+     width: 700%;
      animation-name: animacao;
      animation-duration: 20s;
      animation-iteration-count: infinite;
@@ -293,7 +293,7 @@
 
  [class*="col-"] {
      float: left;
-     padding-right: 5px;
+     padding-right: 20px;
  }
 
  .col-1 {
@@ -350,7 +350,7 @@
  }
 
  #jogos img {
-     height: 650px;
+     height: 550px;
  }
 
  #jogos h1 {
@@ -399,21 +399,25 @@
 
  .col-3 {
     position: relative;
-    display: inline-block; 
+    display: inline-block;
+    transition: all .2s ease; 
 }
 
 .col-3 .img_ajuste {
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 0px 0px 0px 0px;
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 99;
-    transition: all 2s ease;
+    transition: all .2s ease;
 }
 
 .col-3:hover .img_ajuste {
     display: inline;
 }
 
+.col-3 .img_ajuste {
+    transition: .2s;
+}
 
