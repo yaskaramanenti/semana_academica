@@ -1,3 +1,5 @@
+/*Auxílio para o carrosel de imagens funcionar*/
+
 @keyframes animacao {
     0% {margin-left: 0; }
     20% {margin-left: 0; }
