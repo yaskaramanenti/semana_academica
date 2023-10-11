@@ -12,6 +12,7 @@
 
  h1 {
      font-family: var(--fonte-secundaria), sans-serif;
+     padding-top: 10px;
  }
 
  * {
@@ -89,7 +90,7 @@
  }
 
  .galery {
-     width: 1580px;
+     width: 100%;
      height: 650px;
      background-color: #563397;
      overflow: hidden;
@@ -127,7 +128,6 @@
      padding-top: 50px;
      padding-bottom: 50px;
      box-shadow: 10px 0px 10px 0px #3b136e;
-     ;
  }
 
 
@@ -219,7 +219,6 @@
      display: inline-block;
  }
 
-
  /*estilo do formulário*/
 
  .container {
@@ -232,6 +231,7 @@
      margin-top: 30px;
      color: #fff;
  }
+
 
  form fieldset {
      border: 1px solid #ccc;
@@ -264,6 +264,29 @@
      border: 1px solid #fffdfd;
      border-radius: 4px;
 
+ }
+
+ #resultado1 {
+    height: 20px;
+ }
+
+ #resultado2 {
+    height: 20px;
+ }
+
+ #resultado3 {
+    height: 20px;
+ }
+ #resultado4 {
+    height: 20px;
+ }
+
+ #resultado5 {
+    height: 20px;
+ }
+
+ #resultado6 {
+    height: 20px;
  }
 
  select {
