@@ -225,35 +225,28 @@
  }
 
  #resultado1 {
-     height: 20px;
- }
+     height: 20px;}
 
  #resultado2 {
-     height: 20px;
- }
+     height: 20px;}
 
  #resultado3 {
-     height: 20px;
- }
+     height: 20px;}
 
  #resultado4 {
-     height: 20px;
- }
+     height: 20px;}
 
  #resultado5 {
-     height: 20px;
- }
+     height: 20px;}
 
  #resultado6 {
-     height: 20px;
- }
+     height: 20px;}
 
  select {
      width: 100%;
      padding: 8px;
      border: 1px solid #ccc;
-     border-radius: 4px;
- }
+     border-radius: 4px;}
 
  button {
      background-color: rgb(77, 42, 109);
@@ -262,17 +255,13 @@
      border-radius: 4px;
      padding: 10px;
      cursor: pointer;
-     margin-top: 10px;
- }
+     margin-top: 10px;}
 
  button[type="reset"] {
-     background-color: rgb(99, 68, 128);
-
- }
+     background-color: rgb(99, 68, 128);}
 
  button:hover {
-     background-color: #563397;
- }
+     background-color: #563397;}
 
  /*Estilo da aba dos Jogos Eletrônicos*/
 
