@@ -177,7 +177,7 @@
      text-align: center;
  }
 
- /*Estilo do Formulário*/
+ /*Estilo dos Formulários*/
 
  .container {
      width: 1500px;
@@ -224,23 +224,12 @@
 
  }
 
- #resultado1 {
-     height: 20px;}
-
- #resultado2 {
-     height: 20px;}
-
- #resultado3 {
-     height: 20px;}
-
- #resultado4 {
-     height: 20px;}
-
- #resultado5 {
-     height: 20px;}
-
- #resultado6 {
-     height: 20px;}
+ #resultado1 {height: 20px;}
+ #resultado2 {height: 20px;}
+ #resultado3 {height: 20px;}
+ #resultado4 {height: 20px;}
+ #resultado5 {height: 20px;}
+ #resultado6 {height: 20px;}
 
  select {
      width: 100%;
@@ -290,11 +279,10 @@
      width: 74.97%;}
  .col-10 {
      width: 83.3%; }
- .col-11 {
-     width: 91.63%;}
-
+ .col-11 { 
+    width: 91.63%;}
  .col-12 {
-     width: 100%;}
+    width: 100%;}
  .jogos {
      background-color: #4b3379;}
 
