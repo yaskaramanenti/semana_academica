@@ -116,17 +116,14 @@
 
  /*ajuste das fotos */
 
- .fotos {
-    background-color: #563397;   
- }
- #fotos img{
-    height: 400px;
- }
- img.img_ajuste {
-    object-fit: cover;
-    border-radius: 8px 8px 8px 8px;
- }
+ .fotoss{
+    background-color: #563397;
+}
 
+.carousel {
+    background-color:#8360c5;
+    height: 800px; /*Altura do carousel*/
+}
 
 
  /*Organização do estilo da fonte de texto, h1, h2 e h3 com hover e tamanhos específicos*/
