@@ -39,18 +39,19 @@
                         <label for="número de participantes">Número de Participantes:</label>
                         <input type="text" autofocus></input>
 
-                            <script>
-                                var NumeroDeParticipantes = 12
-                                localStorage.setItem('numeroParticipantes', NumeroDeParticipantes);
-                                var participantesArmazenados = localStorage.getItem('numeroParticipantes');
-                                if(participantesArmazenados !== null) {
-                                    var NumeroDeParticipantes = parseInt(participantesArmazenados);
-                                    console.log('Número de participantes: ' + NumeroDeParticipantes);
-                                } else {
-                                    console.log('Número de participantes não encontrado no localStorage.');
+                        <script>
+                            window.onload = function recupera() {
+
+                                if (localStorage.getItem("total_inscritos")) {
+
+                                    var totalInscritos = localStorage.getItem("total_inscritos");
+
+                                    totalInscritos = parseInt(totalInscritos, 10);
+                                    document.getElementById('numero_participantes').value = totalInscritos
                                 }
-                            </script>
-                            
+                            }
+                        </script>
+
                         <h1>Custos de Produtos Alimentícios</h1>
                     </div>
                     <table>

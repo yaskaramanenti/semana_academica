@@ -44,12 +44,14 @@
                     </div>
                     <div class="input-container">
                         <label for="CPF">CPF</label>
-                        <input type="text" name="CPF" id="CPF" placeholder="Seu CPF" required pattern="124.138.669-22">
+                        <input type="text" name="CPF" id="CPF" placeholder="Seu CPF" required
+                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
                     </div>
                     <div class="input-container">
                         <label for="email">E-mail</label>
                         <input type="text" name="email" id="email" placeholder="Seu e-mail" required>
                     </div>
+
                     <div class="input-container">
                         <label for="turma">Turma | curso </label>
                         <select name="turma" id="turma" required>
@@ -65,9 +67,21 @@
                         </select>
                     </div>
                     <div>
-                        <button type="submit" for="http://jkorpela.fi/cgi-bin/echo.cgi" onclick="alert('Inscrição efetuada com sucesso!'); return true">Enviar</button>
+                        <button type="submit" for="http://jkorpela.fi/cgi-bin/echo.cgi"
+                            onclick="alert('Inscrição efetuada com sucesso!'); return true">Enviar</button>
                         <button type="reset">Limpar</button>
                     </div>
+                    <script>
+                        function local() {
+                            if (!localStorage.getItem('total_inscritos')) {
+                                localStorage.setItem('total_inscritos', "0");
+                            }
+
+                            var totalInscritos = localStorage.getItem('total_inscritos');
+                            totalInscritos = parseInt(totalInscritos, 10) + 1;
+                            localStorage.setItem('total_inscritos', totalInscritos);
+                        }
+                    </script>
                 </fieldset>
             </form>
         </section>
