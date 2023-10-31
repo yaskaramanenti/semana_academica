@@ -36,18 +36,17 @@
                     <legend>Calculadora de Orçamento - SCI</legend>
                     <h1>Dados do Evento:</h1> <br>
                     <div class="input-container">
-                        <label for="número de participantes">Número de Participantes:</label>
-                        <input type="text" autofocus></input>
-
+                        Número de Participantes: <input type="text" id="numero_participantes">
                         <script>
-                            window.onload = function recupera() {
-
+                            window.onload = function recuperar() {
+                                
                                 if (localStorage.getItem("total_inscritos")) {
-
+                                    
                                     var totalInscritos = localStorage.getItem("total_inscritos");
-
+                                    
                                     totalInscritos = parseInt(totalInscritos, 10);
                                     document.getElementById('numero_participantes').value = totalInscritos
+                                    alert(totalInscritos)
                                 }
                             }
                         </script>

@@ -10,6 +10,14 @@
     <title>VIII - SCI | Inscreva-se</title>
     <link rel="shortcut icon" href="assets/img/scilogo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+        <style>
+            label.error {
+                color: rgb(44, 5, 66);
+                font-size: 14px;
+            }
+        </style>
 </head>
 
 <body>
@@ -30,7 +38,7 @@
     </header>
     <main>
         <section class="container">
-            <form>
+            <form id="matricula-form" action="http://jkorpela.fi/cgi-bin/echo.cgi">
                 <fieldset>
                     <legend>Cadastro Semana Acadêmica</legend>
                     <div class="input-container">
@@ -39,8 +47,8 @@
                     </div>
                     <div class="input-container">
                         <label for="matricula">Matricula</label>
-                        <input type="text" name="matricula" id="matricula" placeholder="Sua matricula" required
-                            pattern="2023322116">
+                        <input type="text" name="matricula" id="matricula" placeholder="Sua matricula" value="1234567890" required>
+
                     </div>
                     <div class="input-container">
                         <label for="CPF">CPF</label>
@@ -49,7 +57,8 @@
                     </div>
                     <div class="input-container">
                         <label for="email">E-mail</label>
-                        <input type="text" name="email" id="email" placeholder="Seu e-mail" required>
+                        <input type="text" name="email" id="email" placeholder="Seu e-mail" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
                     </div>
 
                     <div class="input-container">
@@ -68,7 +77,7 @@
                     </div>
                     <div>
                         <button type="submit" for="http://jkorpela.fi/cgi-bin/echo.cgi"
-                            onclick="alert('Inscrição efetuada com sucesso!'); return true">Enviar</button>
+                            onclick="local()">Enviar</button>
                         <button type="reset">Limpar</button>
                     </div>
                     <script>
@@ -80,7 +89,29 @@
                             var totalInscritos = localStorage.getItem('total_inscritos');
                             totalInscritos = parseInt(totalInscritos, 10) + 1;
                             localStorage.setItem('total_inscritos', totalInscritos);
+                            alert("inscrição efetuada com sucesso")
                         }
+
+                        $(document).ready(function () {
+                            $('#matricula-form').validate({
+                                rules: {
+                                    matricula: {
+                                        required: true,
+                                        digits: true,
+                                        minlength: 10,
+                                        maxlength: 10
+                                    },
+                                },
+                                messages: {
+                                    cep: {
+                                        required: "O campo CEP é obrigatório",
+                                        digits: "O CEP deve conter apenas dígitos",
+                                        minlength: "O CEP deve conter 10 dígitos",
+                                        maxlength: "O CEP deve conter 10 dígitos"
+                                    },
+                                }
+                            });
+                        });
                     </script>
                 </fieldset>
             </form>
