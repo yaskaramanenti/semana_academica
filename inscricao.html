@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/estilos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="//unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
     <style>
         label.error {
             color: rgb(44, 5, 66);
@@ -38,7 +39,7 @@
     </header>
     <main>
         <section class="container">
-            <form id="matricula-form" action="http://jkorpela.fi/cgi-bin/echo.cgi">
+            <form id="idForm" action="http://jkorpela.fi/cgi-bin/echo.cgi">
                 <fieldset>
                     <legend>Cadastro Semana Acadêmica</legend>
                     <div class="input-container">
@@ -47,19 +48,17 @@
                     </div>
                     <div class="input-container">
                         <label for="matricula">Matricula</label>
-                        <input type="text" name="matricula" id="matricula" placeholder="Sua matricula"
-                            value="1234567890" required>
+                        <input type="text" name="matricula" id="matricula" placeholder="Sua matricula" required>
 
                     </div>
                     <div class="input-container">
-                        <label for="CPF">CPF</label>
-                        <input type="text" name="CPF" id="CPF" placeholder="Seu CPF" required
-                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                        <label for="cpf">CPF</label>
+                        <input matInput type="text" name="cpf" id="cpf" placeholder="Seu CPF" required>
                     </div>
                     <div class="input-container">
                         <label for="email">E-mail</label>
-                        <input type="text" name="email" id="email" placeholder="Seu e-mail" required
-                            pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})$">
+                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" name="email" id="idEmail"
+                            required>
                     </div>
 
                     <div class="input-container">
@@ -77,12 +76,11 @@
                         </select>
                     </div>
                     <div>
-                        <button type="submit"
-                            onclick="local()">Enviar</button>
+                        <button type="submit" onclick="localstorage()">Enviar</button>
                         <button type="reset">Limpar</button>
                     </div>
                     <script>
-                        function local() {
+                        function localstorage() {
                             if (!localStorage.getItem('total_inscritos')) {
                                 localStorage.setItem('total_inscritos', "0");
                             }
@@ -91,10 +89,11 @@
                             totalInscritos = parseInt(totalInscritos, 10) + 1;
                             localStorage.setItem('total_inscritos', totalInscritos);
                             alert("inscrição efetuada com sucesso")
+                            event.preventDefault()
                         }
 
                         $(document).ready(function () {
-                            $('#matricula-form').validate({
+                            $('#idForm').validate({
                                 rules: {
                                     matricula: {
                                         required: true,
@@ -102,9 +101,27 @@
                                         minlength: 10,
                                         maxlength: 10
                                     },
+                                    cpf: {
+                                        required: true,
+                                        minlength: 14,
+                                        maxlength: 14
+                                    }
                                 },
+
                             });
                         });
+
+                        function validarEmail() {
+                            var email = gebi("idEmail").value
+
+                            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                                alert("Email inválido!")
+                                return
+                            }
+                            gebi("idForm").submit()
+                        }
+
+                        VMasker(document.getElementById("cpf")).maskPattern("999.999.999-99");
                     </script>
                 </fieldset>
             </form>

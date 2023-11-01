@@ -10,6 +10,7 @@
     <title>VIII - SCI | Orçamento</title>
     <link rel="shortcut icon" href="assets/img/scilogo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/estilos.css">
+    <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body onload="recuperar()">
@@ -63,22 +64,22 @@
                         <tr>
                             <td>Café</td>
                             <td><input type="number" id="n1"></td>
-                            <td><input type="number" id="n2" placeholder="R$ 5,70"></td>
-                            <td><input type="text" readonly id="resultado1" /></td>
+                            <td><input type="number" id="n2" placeholder="R$"></td>
+                            <td><input type="text" id="resultadoDaMultiplicacao1" /></td>
                         </tr>
                         <tr>
                             <td>Bolo</td>
                             <td><input type="number" id="n3"></td>
-                            <td><input type="number" id="n4" placeholder="R$ 5,70"></td>
-                            <td><input type="text" readonly id="resultado2" />
+                            <td><input type="number" id="n4" placeholder="R$"></td>
+                            <td><input type="text" readonly id="resultadoDaMultiplicacao2" />
 
                         </tr>
                         </tr>
                         <tr>
                             <td>Cachorro Quente</td>
                             <td><input type="number" id="n5"></td>
-                            <td><input type="number" id="n6" placeholder="R$ 8"></td>
-                            <td><input type="text" readonly id="resultado3" /></td>
+                            <td><input type="number" id="n6" placeholder="R$"></td>
+                            <td><input type="text" readonly id="resultadoDaMultiplicacao3" /></td>
                         </tr>
                     </table>
                     <br>
@@ -95,20 +96,20 @@
                             <td>Banner</td>
                             <td><input type="number" id="n7"></td>
                             <td><input type="number" id="n8" placeholder="R$"></td>
-                            <td><input type="text" readonly id="resultado4" /></td>
+                            <td><input type="text" readonly id="resultadoDaMultiplicacao4" /></td>
                         </tr>
                         <tr>
                             <td>Crachá</td>
                             <td><input type="number" id="n9"></td>
                             <td><input type="number" id="n10" placeholder="R$"></td>
-                            <td><input type="text" readonly id="resultado5" />
+                            <td><input type="text" readonly id="resultadoDaMultiplicacao5" />
                         </tr>
                         </tr>
                         <tr>
                             <td>Camiseta</td>
                             <td><input type="number" id="n11"></td>
                             <td><input type="number" id="n12" placeholder="R$"></td>
-                            <td><input type="text" readonly id="resultado6" /></td>
+                            <td><input type="text" readonly id="resultadoDaMultiplicacao6" /></td>
                         </tr>
                     </table>
                     <button type="submit">Salvar Dados</button>
@@ -132,7 +133,7 @@
                             <td><input type="text" readonly id="resultado6" /></td>
                         </tr>
                     </table>
-                    <button type="submit">Calcular Orçamento</button><br>
+                    <button type="submit" value="multiplicar" onclick="multiplicar()">Calcular Orçamento</button><br>
                     <div class="input-container"><br>
                         <label for="texto e-mail">Texto do seu E-mail</label>
                         <textarea name="texto e-mail" id="e-mail" rows="5" cols="90"></textarea>

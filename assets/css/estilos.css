@@ -236,12 +236,20 @@
 
  }
 
- #resultado1 {height: 20px;}
- #resultado2 {height: 20px;}
- #resultado3 {height: 20px;}
- #resultado4 {height: 20px;}
- #resultado5 {height: 20px;}
- #resultado6 {height: 20px;}
+ input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #fffdfd;
+    border-radius: 4px;
+
+}
+
+ #resultadoDaMultiplicacao1 {height: 20px;}
+ #resultadoDaMultiplicacao2 {height: 20px;}
+ #resultadoDaMultiplicacao3 {height: 20px;}
+ #resultadoDaMultiplicacao4 {height: 20px;}
+ #resultadoDaMultiplicacao5 {height: 20px;}
+ #resultadoDaMultiplicacao6 {height: 20px;}
 
  select {
      width: 100%;
